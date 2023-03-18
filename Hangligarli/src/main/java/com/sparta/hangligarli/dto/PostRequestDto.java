@@ -1,9 +1,7 @@
 package com.sparta.hangligarli.dto;
 
 import lombok.Getter;
-import org.hibernate.validator.constraints.URL;
 
-import javax.swing.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
