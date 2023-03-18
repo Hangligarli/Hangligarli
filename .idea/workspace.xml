@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e502e0a9-8e0c-4ae9-a41f-996260be454e" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/Hangligarli/src/main/java/com/sparta/hangligarli/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hangligarli/src/main/java/com/sparta/hangligarli/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hangligarli/src/main/java/com/sparta/hangligarli/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hangligarli/src/main/java/com/sparta/hangligarli/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hangligarli/src/main/java/com/sparta/hangligarli/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hangligarli/src/main/java/com/sparta/hangligarli/service/PostService.java" afterDir="false" />
+    </list>
+    <list id="8271b409-682f-4fcd-b3db-a8261a544873" name="User 님이 변경한 내용" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/Hangligarli">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2N8QJYpcY4B58WB9iYizh0uxV6c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/스프링 파일/myselectshop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "36b5e041917d1ceb507e54240a6a23c4",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="HangligarliApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Hangligarli.Hangligarli.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.hangligarli.HangligarliApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="e502e0a9-8e0c-4ae9-a41f-996260be454e" name="변경" comment="" />
+      <created>1679043157290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679043157290</updated>
+      <workItem from="1679043158564" duration="6694000" />
+      <workItem from="1679051030418" duration="1343000" />
+      <workItem from="1679057018276" duration="18026000" />
+      <workItem from="1679076858367" duration="4573000" />
+      <workItem from="1679105121464" duration="1934000" />
+      <workItem from="1679111072822" duration="5860000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
