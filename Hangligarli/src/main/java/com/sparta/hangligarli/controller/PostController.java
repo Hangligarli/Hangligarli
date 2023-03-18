@@ -1,7 +1,6 @@
 package com.sparta.hangligarli.controller;
 
 import com.sparta.hangligarli.dto.PostRequestDto;
-import com.sparta.hangligarli.dto.PostResponseDto;
 import com.sparta.hangligarli.exception.CustomErrorCode;
 import com.sparta.hangligarli.exception.CustomException;
 import com.sparta.hangligarli.exception.ResponseMessage;
