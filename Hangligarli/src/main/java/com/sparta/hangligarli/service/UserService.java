@@ -2,9 +2,7 @@ package com.sparta.hangligarli.service;
 
 import com.sparta.hangligarli.dto.LoginRequestDto;
 import com.sparta.hangligarli.dto.SignupRequestDto;
-import com.sparta.hangligarli.entity.Post;
 import com.sparta.hangligarli.entity.User;
-import com.sparta.hangligarli.entity.UserRoleEnum;
 import com.sparta.hangligarli.exception.CustomErrorCode;
 import com.sparta.hangligarli.exception.CustomException;
 import com.sparta.hangligarli.repository.UserRepository;

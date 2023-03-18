@@ -1,8 +1,7 @@
 package com.sparta.hangligarli.dto;
 import com.sparta.hangligarli.entity.Post;
-import com.sparta.hangligarli.entity.User;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+
 
 
 @Getter

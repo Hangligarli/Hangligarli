@@ -8,13 +8,9 @@ import com.sparta.hangligarli.entity.User;
 import com.sparta.hangligarli.exception.CustomErrorCode;
 import com.sparta.hangligarli.exception.CustomException;
 import com.sparta.hangligarli.repository.PostRepository;
-import com.sparta.hangligarli.security.UserDetailsImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
