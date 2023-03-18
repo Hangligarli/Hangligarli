@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 public class PostResponseDto {
-
+    private Long id;
     private String title;
     private String nickname;
     private String level;
@@ -18,6 +18,7 @@ public class PostResponseDto {
     private String content;
 
     public PostResponseDto (Post post)  {
+        this.id = post.getId();
         this.title = post.getTitle();
         this.nickname = post.getUser().getNickname();
         this.level = post.getLevel();

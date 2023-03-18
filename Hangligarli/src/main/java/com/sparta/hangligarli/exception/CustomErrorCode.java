@@ -15,6 +15,7 @@ public enum CustomErrorCode {
     DUPLICATE_NICKNAME(BAD_REQUEST, "중복된 닉네임이 존재합니다"),
     NOT_PROPER_PASSWORD(BAD_REQUEST, "비밀번호가 일치하지 않습니다."),
     NOT_PROPER_INPUTFORM(BAD_REQUEST, "입력한 형식이 맞지 않습니다."),
+    NOT_PROPER_URLFORM(BAD_REQUEST, "입력한 URL 형식이 맞지 않습니다."),
     NOT_AUTHOR(BAD_REQUEST, "작성자만 삭제/수정할 수 있습니다."),
     WRONG_ADMIN_TOKEN(BAD_REQUEST, "관리자 암호가 틀려 등록이 불가능합니다."),
 
