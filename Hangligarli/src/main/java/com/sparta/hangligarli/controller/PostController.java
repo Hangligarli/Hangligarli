@@ -45,9 +45,9 @@ public class PostController {
 
     //게시글 수정
     @PutMapping("/api/posts/update/{id}")
-    public PostResponseDto updatePost(@PathVariable Long id, @RequestBody PostRequestDto postRequestDto,
+    public ResponseEntity updatePost(@PathVariable Long id, @RequestBody PostRequestDto postRequestDto,
                                       @AuthenticationPrincipal UserDetailsImpl userDetails){
-        return postService.updatePost(id, postRequestDto, userDetails.getUser());
+        return ResponseMessage.SuccessResponse("게스물 수정 성공", postService.updatePost(id, postRequestDto, userDetails.getUser()));
     }
 
     //게시글 삭제

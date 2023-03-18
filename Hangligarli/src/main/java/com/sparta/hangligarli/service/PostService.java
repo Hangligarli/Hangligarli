@@ -61,6 +61,7 @@ public class PostService {
         }
 
         post.update(postRequestDto, user);
+        postRepository.save(post);
         return new PostResponseDto(post);
     }
 
