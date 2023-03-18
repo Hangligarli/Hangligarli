@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -32,29 +33,24 @@ public class PostService {
     }
 
     //게시물 선택 조회
+    @Transactional(readOnly = true)
     public PostResponseDto getPost (Long id) {
-        Post post = postRepository.findById(id).orElseThrow(
-                () -> new CustomException(CustomErrorCode.POST_NOT_FOUND));
+        Post post = findPost(id);
         return new PostResponseDto(post);
     }
 
     //게시물 목록 조회
+    @Transactional(readOnly = true)
     public List<PostResponseDtoList> getPostList () {
         List<Post> postList = postRepository.findAll();
-        List<PostResponseDtoList> ResponseList = new ArrayList<>();
 
-        for (Post post : postList) {
-            PostResponseDtoList responseDto = new PostResponseDtoList(post);
-            ResponseList.add(responseDto);
-        }
-
-        return ResponseList;
+        return postList.stream().map(PostResponseDtoList::new).collect(Collectors.toList());
     }
 
-    //업데이트
+    //게시물 수정
+    @Transactional
     public PostResponseDto updatePost(Long id, PostRequestDto postRequestDto, User user) {
-        Post post = postRepository.findById(id).orElseThrow(
-                () -> new CustomException(CustomErrorCode.POST_NOT_FOUND));
+        Post post = findPost(id);
 
         if (!post.getUser().getNickname().equals(user.getNickname())) {
             throw new CustomException(CustomErrorCode.NOT_AUTHOR);
@@ -65,10 +61,10 @@ public class PostService {
         return new PostResponseDto(post);
     }
 
-
+    //게시물 삭제
+    @Transactional
     public String deletePost(Long id, User user) {
-        Post post = postRepository.findById(id).orElseThrow(
-                () -> new CustomException(CustomErrorCode.POST_NOT_FOUND));
+        Post post = findPost(id);
 
         if (!post.getUser().getNickname().equals(user.getNickname())) {
             throw new CustomException(CustomErrorCode.NOT_AUTHOR);
@@ -76,6 +72,11 @@ public class PostService {
 
         postRepository.delete(post);
         return "게시물 삭제 성공";
+    }
+
+    private Post findPost (Long id) {
+        return postRepository.findById(id).orElseThrow(
+                () -> new CustomException(CustomErrorCode.POST_NOT_FOUND));
     }
 }
 
