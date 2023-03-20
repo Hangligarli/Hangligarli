@@ -24,6 +24,15 @@ public class PostController {
     @PostMapping("/api/posts/")
     public ResponseEntity createPost(@Valid @RequestBody PostRequestDto postRequestDto, BindingResult bindingResult,
                                      @AuthenticationPrincipal UserDetailsImpl userDetails){
+        System.out.println("===========컨트롤러 들어왔음!!============");
+        System.out.println(userDetails.getUsername());
+        System.out.println(postRequestDto.getContent());
+        System.out.println(postRequestDto.getMinperson());
+        System.out.println(postRequestDto.getMaxperson());
+        System.out.println(postRequestDto.getTime());
+        System.out.println(postRequestDto.getTitle());
+        System.out.println(postRequestDto.getImage());
+        System.out.println(postRequestDto.getLevel());
         if (bindingResult.hasErrors()) {
             throw new CustomException(CustomErrorCode.NOT_PROPER_URLFORM);
         }
@@ -33,6 +42,8 @@ public class PostController {
     //게시글 전체 출력
     @GetMapping("/api/posts/list")
     public ResponseEntity getPostList(){
+        System.out.println("===========컨트롤러 들어왔음!!============");
+        System.out.println("게시글 전체 목록 조회 요청 들어옴");
         return ResponseMessage.SuccessResponse("게시물 조회 성공", postService.getPostList());
     }
 

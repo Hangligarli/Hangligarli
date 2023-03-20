@@ -26,9 +26,12 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String token = jwtUtil.resolveToken(request);
-
+        System.out.println("====================토큰 출력 확인2222222==========");
+        System.out.println("토큰:" + token);
         if(token != null) {
+            System.out.println("토큰 있음!!!");
             if(!jwtUtil.validateToken(token)){
+                System.out.println("토큰 잘못 됐음!!!");
                 jwtExceptionHandler(response, "Token Error", HttpStatus.UNAUTHORIZED.value());
                 return;
             }
@@ -51,6 +54,8 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         response.setContentType("application/json");
         try {
             String json = new ObjectMapper().writeValueAsString(new ResponseMessage(msg, statusCode, ""));
+            System.out.println("==============토큰 출력 확인==================");
+            System.out.println(json);
             response.getWriter().write(json);
         } catch (Exception e) {
             log.error(e.getMessage());
