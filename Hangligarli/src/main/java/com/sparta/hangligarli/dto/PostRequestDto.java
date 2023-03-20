@@ -7,7 +7,7 @@ import javax.validation.constraints.Pattern;
 
 @Getter
 public class PostRequestDto {
-    @NotBlank(message = "제목입력은 필수 입니다.")
+    @NotBlank(message = "제목 입력은 필수 입니다.")
     private String title;
     private String level;
     private int time;

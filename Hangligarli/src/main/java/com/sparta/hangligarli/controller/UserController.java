@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 @RequiredArgsConstructor
 @RequestMapping("/api/users")
 public class UserController {
@@ -37,4 +37,15 @@ public class UserController {
         response.setHeader(JwtUtil.AUTHORIZATION_HEADER, jwtUtil.createToken(user.get("username"), user.get("nickname")));
         return ResponseMessage.SuccessResponse("로그인 성공", "");
     }
+
+    @PostMapping("/check/username")
+    public ResponseEntity checkUsername(@RequestBody HashMap<String, String> username) {
+        return ResponseMessage.SuccessResponse(userService.checkUsername(username.get("username")), "");
+    }
+
+    @PostMapping("/check/nickname")
+    public ResponseEntity checkNickname(@RequestBody HashMap<String, String> nickname) {
+        return ResponseMessage.SuccessResponse(userService.checkNickname(nickname.get("nickname")), "");
+    }
+
 }

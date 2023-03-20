@@ -57,4 +57,18 @@ public class UserService {
 
         return result;
     }
+
+    public String checkUsername(String username) {
+        if (userRepository.existsUserByUsername(username)) {
+            throw new CustomException(CustomErrorCode.DUPLICATE_USER);
+        }
+        return "사용가능한 아이디입니다.";
+    }
+
+    public String checkNickname(String nickname) {
+        if (userRepository.existsUserByNickname(nickname)) {
+            throw new CustomException(CustomErrorCode.DUPLICATE_NICKNAME);
+        }
+        return "사용가능한 닉네임입니다.";
+    }
 }
