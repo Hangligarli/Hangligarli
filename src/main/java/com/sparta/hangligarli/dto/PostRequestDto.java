@@ -16,6 +16,7 @@ public class PostRequestDto {
 
     // url의 확장자가 jpg,png,gif 가 맞는지 확인하는 정규식
     @NotBlank()
+    @Pattern(regexp = "^(https?|ftp)://[a-zA-Z0-9]+([-.][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,}(:(\\\\d{1,5}))?([/?#]\\\\S*)?$")
     @Pattern(regexp = "^https?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+\\.(?:jpe?g|png|gif)$")
     private String image;
     private String content;
