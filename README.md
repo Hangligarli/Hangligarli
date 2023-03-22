@@ -34,7 +34,7 @@ posts : 게시물 작성, 게시물조회, 게시물목록, 게시물수정, 게
 * **BE 주영미** 
 * **BE 서영석**
 * **FE 김재란**
-* **FE 박승우**
+* **FE 박승우** [gitHub](https://github.com/parkingbox)  [Blog](https://velog.io/@psw501144)
 
 * **프론트엔드 깃허브(https://github.com/parkingbox/Hangligarli-FE)** 
 
