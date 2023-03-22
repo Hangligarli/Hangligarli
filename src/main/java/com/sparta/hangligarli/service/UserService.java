@@ -2,6 +2,7 @@ package com.sparta.hangligarli.service;
 
 import com.sparta.hangligarli.dto.LoginRequestDto;
 import com.sparta.hangligarli.dto.SignupRequestDto;
+import com.sparta.hangligarli.entity.Post;
 import com.sparta.hangligarli.entity.User;
 import com.sparta.hangligarli.exception.CustomErrorCode;
 import com.sparta.hangligarli.exception.CustomException;
@@ -19,6 +20,7 @@ import java.util.Map;
 public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final PostService postService;
     private final String ADMIN_TOKEN = "AAABnvxRVklrnYxKZ0aHgTBcXukeZygoC";
     @Transactional
     public String signup(SignupRequestDto signupRequestDto) {
@@ -58,6 +60,7 @@ public class UserService {
         return result;
     }
 
+    @Transactional
     public String checkUsername(String username) {
         if (userRepository.existsUserByUsername(username)) {
             throw new CustomException(CustomErrorCode.DUPLICATE_USER);
@@ -65,10 +68,21 @@ public class UserService {
         return "사용가능한 아이디입니다.";
     }
 
+    @Transactional
     public String checkNickname(String nickname) {
         if (userRepository.existsUserByNickname(nickname)) {
             throw new CustomException(CustomErrorCode.DUPLICATE_NICKNAME);
         }
         return "사용가능한 닉네임입니다.";
+    }
+
+    @Transactional
+    public String unregister(String nickname) {
+        User user = userRepository.findByNickname(nickname).orElseThrow(
+                () -> new CustomException(CustomErrorCode.USER_NOT_FOUND)
+        );
+        postService.deletePostCreatedByUser(user);
+        userRepository.deleteByNickname(nickname);
+        return "회원 탈퇴 성공";
     }
 }

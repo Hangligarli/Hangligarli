@@ -74,6 +74,16 @@ public class PostService {
         return postRepository.findById(id).orElseThrow(
                 () -> new CustomException(CustomErrorCode.POST_NOT_FOUND));
     }
+
+    @Transactional
+    protected void deletePostCreatedByUser(User user) {
+        List<Post> postList = postRepository.findAllByUser(user);
+        if (postList.size() > 0) {
+            for (Post post : postList) {
+                postRepository.deleteById(post.getId());
+            }
+        }
+    }
 }
 
 
