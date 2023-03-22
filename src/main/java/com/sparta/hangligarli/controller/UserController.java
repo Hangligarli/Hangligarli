@@ -48,5 +48,10 @@ public class UserController {
         return ResponseMessage.SuccessResponse(userService.checkNickname(nickname.get("nickname")), "");
     }
 
+    @DeleteMapping("/unregister")
+    public ResponseEntity unregister(@RequestBody HashMap<String, String> nickname) {
+        return ResponseMessage.SuccessResponse(userService.unregister(nickname.get("nickname")), "");
+    }
+
 }
 // 너무해
