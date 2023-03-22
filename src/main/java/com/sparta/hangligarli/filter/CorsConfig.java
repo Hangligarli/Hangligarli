@@ -1,5 +1,6 @@
 package com.sparta.hangligarli.filter;
 
+import com.sparta.hangligarli.jwt.JwtUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -21,6 +22,7 @@ public class CorsConfig {
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setExposedHeaders(List.of("*"));
+        config.addExposedHeader(JwtUtil.AUTHORIZATION_HEADER);  // https://kingchan223.tistory.com/230 참조
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
