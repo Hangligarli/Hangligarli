@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12c2e1d7-bb0d-4f0c-89db-727bc64b308a" name="Changes" comment="">
+<change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/hangligarli/dto/PostRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/hangligarli/dto/PostRequestDto.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/hangligarli/dto/PostRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/hangligarli/dto/PostRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/hangligarli/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/hangligarli/controller/UserController.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,9 +166,9 @@
     <configuration name="HangligarliApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
         <env name="jasypt.password" value="sksmsdudal1270" />
-        <env name="secrets.DB_URL" value="jdbc:mysql://hanghae-database.cjzmldb2vulr.ap-northeast-2.rds.amazonaws.com:3306/Forum" />
-        <env name="secrets.ADMIN" value="admin" />
-        <env name="secrets.PASSWORD" value="sksmsdudal1270" />
+        <env name="ADMIN" value="admin" />
+        <env name="DB_URL" value="jdbc:mysql://hanghae-database.cjzmldb2vulr.ap-northeast-2.rds.amazonaws.com:3306/Forum" />
+        <env name="PASSWORD" value="hangligarli1234" />
       </envs>
       <module name="Hangligarli.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.hangligarli.HangligarliApplication" />
