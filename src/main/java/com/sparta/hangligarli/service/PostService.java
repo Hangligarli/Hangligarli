@@ -78,9 +78,12 @@ public class PostService {
     @Transactional
     protected void deletePostCreatedByUser(User user) {
         List<Post> postList = postRepository.findAllByUser(user);
+        System.out.println("postlist: " + postList.toString());
         if (postList.size() > 0) {
             for (Post post : postList) {
+                System.out.println("게시글 삭제 전");
                 postRepository.deleteById(post.getId());
+                System.out.println("게시글 삭제 완료");
             }
         }
     }

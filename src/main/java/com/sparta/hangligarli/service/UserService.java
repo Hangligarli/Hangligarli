@@ -81,8 +81,10 @@ public class UserService {
         User user = userRepository.findByNickname(nickname).orElseThrow(
                 () -> new CustomException(CustomErrorCode.USER_NOT_FOUND)
         );
+        System.out.println("입력 받은 닉네임 확인: " + nickname);
         postService.deletePostCreatedByUser(user);
-        userRepository.deleteByNickname(nickname);
+        System.out.println("지우기 전 닉네임 확인: " + user.getNickname());
+        userRepository.deleteByNickname(user.getNickname());
         return "회원 탈퇴 성공";
     }
 }
