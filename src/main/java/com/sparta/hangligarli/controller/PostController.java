@@ -21,7 +21,7 @@ public class PostController {
     private final PostService postService;
 
     //게시글 입력
-    @PostMapping("/api/posts/")
+    @PostMapping("/api/posts")
     public ResponseEntity createPost(@Valid @RequestBody PostRequestDto postRequestDto, BindingResult bindingResult,
                                      @AuthenticationPrincipal UserDetailsImpl userDetails){
         System.out.println("===========컨트롤러 들어왔음!!============");
