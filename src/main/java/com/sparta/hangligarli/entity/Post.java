@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
 @Getter
@@ -30,10 +31,10 @@ public class Post {
     @Column(nullable = false)
     private String level;
 
-    @Column(nullable = false)
+    @Column(length = 4000, nullable = false)
     private String image;
 
-    @Column(nullable = false)
+    @Column(length = 4000, nullable = false)
     private String content;
 
     @Column(nullable = false)
