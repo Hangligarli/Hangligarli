@@ -35,7 +35,7 @@ public class UserController {
     public ResponseEntity login(@RequestBody LoginRequestDto loginRequestDto, HttpServletResponse response) {
         Map<String, String> user = userService.login(loginRequestDto);
         response.setHeader(JwtUtil.AUTHORIZATION_HEADER, jwtUtil.createToken(user.get("username"), user.get("nickname")));
-        return ResponseMessage.SuccessResponse("너무해", "");
+        return ResponseMessage.SuccessResponse("로그인 성공!", "");
     }
 
     @PostMapping("/check/username")

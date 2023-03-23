@@ -53,7 +53,7 @@ public class PostService {
         }
 
         post.update(postRequestDto, user);
-        postRepository.save(post);
+        System.out.println("수정 성공");
         return new PostResponseDto(post);
     }
 
