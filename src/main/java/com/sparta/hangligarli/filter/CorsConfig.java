@@ -22,7 +22,7 @@ public class CorsConfig {
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setExposedHeaders(List.of("*"));
-        config.addExposedHeader(JwtUtil.AUTHORIZATION_HEADER);  // https://kingchan223.tistory.com/230 참조
+//        config.addExposedHeader(JwtUtil.AUTHORIZATION_HEADER);  // https://kingchan223.tistory.com/230 참조
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
