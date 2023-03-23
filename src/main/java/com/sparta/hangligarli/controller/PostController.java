@@ -42,7 +42,7 @@ public class PostController {
     //게시글 전체 출력
     @GetMapping("/api/posts/list")
     public ResponseEntity getPostList(){
-        System.out.println("===========컨트롤러 들어왔음!!============");
+        System.out.println("===========컨트롤러 들어왔음!!===========");
         System.out.println("게시글 전체 목록 조회 요청 들어옴");
         return ResponseMessage.SuccessResponse("게시물 조회 성공", postService.getPostList());
     }
