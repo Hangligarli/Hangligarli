@@ -30,14 +30,15 @@ posts : 게시물 작성, 게시물조회, 게시물목록, 게시물수정, 게
 
 
 ## 팀원 소개
-* **BE 장혁진** [gitHub](https://github.com/hyukjin1210)  [Blog](https://chaos2061.tistory.com/)
-* **BE 주영미** 
-* **BE 서영석**
-* **FE 김재란**
-* **FE 박승우** [gitHub](https://github.com/parkingbox)  [Blog](https://velog.io/@psw501144)
+
+|팀원|BE 장혁진|BE 주영미|BE 서영석|FE 박승우|FE 김재란|
+|---|---|---|---|---|---|
+|github|[github](https://github.com/hyukjin1210)|123|123|[github](https://github.com/parkingbox)|123|
+|Blog|[Blog](https://chaos2061.tistory.com/)|123|123|[Blog](https://velog.io/@psw501144)|123|
 
 * **프론트엔드 깃허브(https://github.com/parkingbox/Hangligarli-FE)** 
 
 * **항리갈리(https://thrilling-stomach-03f.notion.site/f88c508eecd84cbd8a1d98119983f2a5)**
 * **API 명세서(https://documenter.getpostman.com/view/26052474/2s93RL1bto)**
+
 
