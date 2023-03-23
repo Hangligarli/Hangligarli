@@ -57,6 +57,9 @@ public class PostController {
     @PutMapping("/api/posts/update/{id}")
     public ResponseEntity updatePost(@PathVariable Long id, @RequestBody PostRequestDto postRequestDto,
                                       @AuthenticationPrincipal UserDetailsImpl userDetails){
+        System.out.println("===========컨트롤러 들어왔음!!===========");
+        System.out.println("게시글 수정하기 요청 들어옴");
+        System.out.println("사용자: " + userDetails.getUsername());
         return ResponseMessage.SuccessResponse("게시물 수정 성공", postService.updatePost(id, postRequestDto, userDetails.getUser()));
     }
 
